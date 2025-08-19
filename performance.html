@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
+</head>
+<body>
+
+  <div class="dashboard">
+    
+    <!-- Top Section -->
+    <div class="grid">
+      <!-- Performance Summary -->
+      <div class="card">
+        <div class="chats">
+            <h3>Your Performance</h3>
+       <div class="grid">
+         <p class="Average"> Average Grade: 87%</p>
+        <p class="Passed"> Quizzes Passed: 13/15</p>
+       </div>
+        <p class="Hours"> Weekly Study Goal: 72hrs/wk</p>
+        <div class="progress-bar">
+      <div class="progress-fill">28%</div>
+    </div>
+        </div>
+      </div>
+
+      <!-- Weekly Study Time Chart -->
+      <div class="card">
+        <h3>Weekly Study Time</h3>
+        <canvas id="studyTimeChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Recent Quiz Scores -->
+    <div class="card">
+      <h3>Recent Quiz Scores</h3>
+      <canvas id="quizScoresChart"></canvas>
+    </div>
+
+  </div>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .dashboard {
+      width: 900px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+    .card .chats .progress-fill{
+         height: 100%;
+      width: 28%; 
+      background: #3498db;
+      color: #fff;
+      text-align: right;
+      padding-right: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 20px;
+      border-radius: 20px 0 0 20px;
+      transition: width 0.5s ease; /* smooth animation */
+      
+    }
+    .card .Passed{
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border-radius: 10%;
+
+    }
+    .card .Average{
+                      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                      padding: 20px;
+                      border-radius: 10%;
+                      
+
+
+    }
+
+    .progress-bar{
+      width: 100%;
+      background: #e0e0e0;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+     }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 250px !important;
+    }
+  </style>
+
+  <script>
+    // Weekly Study Time (Bar Chart)
+    const ctx1 = document.getElementById('studyTimeChart');
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        datasets: [{
+          label: 'Hours',
+          data: [1, 2, 1, 4, 3],
+          backgroundColor: '#3498db'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, stepSize: 1 }
+        }
+      }
+    });
+
+    // Recent Quiz Scores (Line Chart)
+    const ctx2 = document.getElementById('quizScoresChart');
+    new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['Quiz 1', 'Quiz 2', 'Quiz 3', 'Quiz 4', 'Quiz 5'],
+        datasets: [{
+          label: 'Score',
+          data: [20, 18, 19, 17, 21],
+          borderColor: '#2ecc71',
+          backgroundColor: 'rgba(46, 204, 113, 0.2)',
+          tension: 0.3,
+          fill: true
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: true, max: 25 }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

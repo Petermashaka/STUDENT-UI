@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>courses</title>
+</head>
+<body>
+    <!-- course dashboard -->
+     <div class="dashboard">
+        <div class="course-card">
+        <h3>React Development Fundamentals</h3>
+        <p>Dr. Jackson</p>
+        <p class="progress-text">progress:50%</p>
+        <div class="progress-bar">
+            <div class="progress-fill1">50%</div>
+        </div>
+     
+        <div>
+      <p>9 of 24 lessons completed</p>
+      <p>Last activity: 2 hrs ago</p>
+      <p>Next: Advanced Hooks</p>
+      <a href="#" class="btn">Continue</a>
+        </div>
+        </div>
+
+        <div class="course-card">
+        <h3>Data science with python</h3>
+        <p>Dr. Jylon</p>
+        <p class="progress-text">progress:30%</p>
+        <div class="progress-bar">
+            <div class="progress-fill2">30%</div>
+        </div>
+        <div>
+      <p>1 of 24 lessons completed</p>
+      <p>Last activity: 1 hrs ago</p>
+      <p>Next: Advanced Hooks</p>
+      <a href="" class="btn">Continue</a>
+        </div>
+        </div>
+
+        <div class="course-card">
+        <h3>UI/UX design principles</h3>
+        <p>Dr. Scalion</p>
+        <p class="progress-text">progress:70%</p>
+        <div class="progress-bar">
+            <div class="progress-fill3">70%</div>
+        </div>
+        <div>
+      <p>9 of 24 lessons completed</p>
+      <p>Last activity: 5 hrs ago</p>
+      <p>Next: Advanced Hooks</p>
+      <a href="#" class="btn">Continue</a>
+        </div>
+        </div>
+
+        <div class="course-card">
+        <h3>Machine learning Basics</h3>
+        <p>Dr. Nicholous</p>
+        <p class="progress-text">progress:86%</p>
+        <div class="progress-bar">
+            <div class="progress-fill4">86%</div>
+        </div>
+        <div>
+      <p>2 of 24 lessons completed</p>
+      <p>Last activity: 12 hrs ago</p>
+      <p>Next: Advanced Hooks</p>
+      <a href="#" class="btn">Continue</a>
+        </div>   
+
+     </div>
+     </div>
+     <!-- styling  -->
+      <style>
+         *{
+        padding: 0;
+        margin: 0;
+        font-family: "poppins";
+        align-items: center;
+        justify-content: center;
+    }
+    body{
+        background: white;
+        min-height: 100vh;
+       
+    }
+
+     .dashboard{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 900px;
+      margin-left: 180px;
+      margin-top: 20px;
+      
+     }
+
+     .course-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+     .course-card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+     }
+      .course-card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+      }
+      /* progres-bar */
+      .progress-bar {
+      background: #e0e0e0;
+      border-radius: 20px;
+      height: 20pxpx;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+    /* fill */
+      .progress-fill1 {
+      background: #3498db;
+      height: 100%;
+      width: 50%;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      text-align: right;
+    }
+     .progress-fill2 {
+      background: #3498db;
+      height: 100%;
+      width: 30%;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      text-align: right;
+    }
+     .progress-fill3 {
+      background: #3498db;
+      height: 100%;
+      width: 70%;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      text-align: right;
+    }
+     .progress-fill4 {
+      background: #3498db;
+      height: 100%;
+      width: 86%;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      text-align: right;
+    }
+     .progress-text {
+      font-size: 13px;
+      font-weight: bold;
+      color: #333;
+    }
+    /* button styling */
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: #007BFF;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: background 0.3s;
+    }
+     .btn:hover {
+      background: #0056b3;
+    }
+      </style>
+
+    
+</body>
+</html>

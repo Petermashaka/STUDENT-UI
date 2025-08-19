@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+</head>
+<body>
+
+    <div class="header">
+        <h2> <img src="icons/person-svgrepo-com.svg" alt="" height="24px" width="24px">Student dashboard</h2>
+    </div>
+    <!-- cards -->
+    <div class="card-container">
+         <div class="cards">
+        <h4>Total course</h4>
+        <p class="count">5</p>
+     </div>
+     <div class="cards">
+        <h4>Completed</h4>
+        <p class="count">2</p>
+     </div>
+     <div class="cards">
+        <h4>Study streak</h4>
+        <p class="count">12 days</p>
+     </div>
+     <div class="cards">
+        <h4>Study time</h4>
+        <p class="count">156hrs</p>
+     </div>
+    </div>
+
+     <div class="progress-container">
+    <p class="progress-title">Overall Learning Progress</p>
+    
+    <div class="progress-bar">
+      <div class="progress-fill">28%</div>
+    </div>
+
+    <p class="progress-text">You're doing great! Keep it up 👍</p>
+  </div>
+
+  <!-- Navigation bar -->
+
+  <div class="nav">
+    <a href="#">Courses</a>
+  <a href="#">Performance</a>
+  <a href="#">Activities</a>
+  <a href="#">Achievements</a>
+
+  </div>
+
+  <!-- css code -->
+  <style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: "poppins";
+        align-items: center;
+        justify-content: center;
+    }
+    body{
+        background: white;
+        min-height: 100vh;
+       
+    }
+    .cards{
+      background: #fff;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    /* cards-container*/
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        
+    
+    }
+    .header{
+        background-color: azure;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 12px;
+        border-bottom: solid;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+    /* progres-bar css code */
+    .progress-container{
+        /* background:azure; */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width:1200px;
+        margin: 20px;
+    }
+     .progress-bar{
+      width: 100%;
+      background: #e0e0e0;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+     }
+     .progress-fill{
+      height: 100%;
+      width: 28%; 
+      background: #3498db;
+      color: #fff;
+      text-align: right;
+      padding-right: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 20px;
+      border-radius: 20px 0 0 20px;
+      transition: width 0.5s ease; /* smooth animation */
+     }
+
+     /* progress text styling */
+     .progress-text {
+      margin-top: 10px;
+      font-size: 14px;
+      color: green;
+     }
+
+     /* Navigation bar css */
+     .nav {
+      display: flex;
+      justify-content: space-around;
+      border-top: 2px solid #ddd;
+      padding: 15px 20px;
+      margin-left: 25%;
+      margin-top: 40px;
+      width: 500px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    /* nav link */
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+    .nav a:hover {
+      color: #007BFF; /* blue highlight */
+      transform: translateY(-2px);
+    }
+
+    
+
+  </style>
+</body>
+</html>
