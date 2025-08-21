@@ -40,15 +40,214 @@
     <p class="progress-text">You're doing great! Keep it up 👍</p>
   </div>
 
-  <!-- Navigation bar -->
+  <!-- Navigation bar  with tabs-->
+   <div class="tab-btns">
+    <button class="tab-btn-active">courses</button>
+    <button class="tab-btn" data-tab="tab1">Performance</button>
+    <button class="tab-btn" data-tab="tab2">Activities</button>
+    <button class="tab-btn" data-tab="tab3">Achievements</button>
 
-  <div class="nav">
-    <a href="course.html">Courses</a>
-  <a href="performance.html">Performance</a>
-  <a href="activity.html">Activities</a>
-  <a href="achievement.html">Achievements</a>
 
-  </div>
+   </div>
+
+   <!-- tab contents -->
+     <div class="dashboard"  style="display: none;">
+        <div class="course-card">
+        <h3>React Development Fundamentals</h3>
+        <p>Dr. Jackson</p>
+        <p class="progress-text">progress:50%</p>
+        <div class="progress-bar">
+            <div class="progress-fill1">50%</div>
+        </div>
+     
+        <div>
+      <p>9 of 24 lessons completed</p>
+      <p>Last activity: 2 hrs ago</p>
+      <p>Next: Advanced Hooks</p>
+      <a href="#" class="btn">Continue</a>
+        </div>
+        </div>
+
+        <div class="course-card">
+        <h3>Data science with python</h3>
+        <p>Dr. Jylon</p>
+        <p class="progress-text">progress:30%</p>
+        <div class="progress-bar">
+            <div class="progress-fill2">30%</div>
+        </div>
+        <div>
+      <p>1 of 24 lessons completed</p>
+      <p>Last activity: 1 hrs ago</p>
+      <p>Next: Advanced Hooks</p>
+      <a href="" class="btn">Continue</a>
+        </div>
+        </div>
+
+        <div class="course-card">
+        <h3>UI/UX design principles</h3>
+        <p>Dr. Scalion</p>
+        <p class="progress-text">progress:70%</p>
+        <div class="progress-bar">
+            <div class="progress-fill3">70%</div>
+        </div>
+        <div>
+      <p>9 of 24 lessons completed</p>
+      <p>Last activity: 5 hrs ago</p>
+      <p>Next: Advanced Hooks</p>
+      <a href="#" class="btn">Continue</a>
+        </div>
+        </div>
+
+        <div class="course-card">
+        <h3>Machine learning Basics</h3>
+        <p>Dr. Nicholous</p>
+        <p class="progress-text">progress:86%</p>
+        <div class="progress-bar">
+            <div class="progress-fill4">86%</div>
+        </div>
+        <div>
+      <p>2 of 24 lessons completed</p>
+      <p>Last activity: 12 hrs ago</p>
+      <p>Next: Advanced Hooks</p>
+      <a href="#" class="btn">Continue</a>
+        </div>   
+
+     </div>
+
+     </div>
+   <div id="tab1" class="performance" style="display:none;">
+  <iframe src="performance.html" width="100%" height="600px" style="border:none;"></iframe>
+</div>
+<div id="tab2" class="Activities" style="display:none;">
+  <iframe src="activity.html" width="100%" height="600px" style="border:none;"></iframe>
+</div>
+<div id="tab3" class="Achievements" style="display:none;">
+  <iframe src="achievement.html" width="100%" height="600px" style="border:none;"></iframe>
+</div>
+
+
+      <style>
+         *{
+        padding: 0;
+        margin: 0;
+        font-family: "poppins";
+        align-items: center;
+        justify-content: center;
+    }
+    body{
+        background: white;
+        min-height: 100vh;
+       
+    }
+    .tab-btns button {
+      flex: 1;
+      padding: 10px 80px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: rgb(182, 184, 184);
+      transition: background 0.3s;
+      gap: 30px;
+      border-radius: 10px;
+
+
+    }
+    .tab-btns{
+      gap: 15px;
+      text-align: center;
+    }
+    .tab-btns button:hover{
+      background: white;
+    }
+
+     .dashboard{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+      margin-top: 20px;
+      
+     }
+
+     .course-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+     .course-card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+     }
+      .course-card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+      }
+      /* progres-bar */
+      .progress-bar {
+      background: #e0e0e0;
+      border-radius: 20px;
+      height: 20pxpx;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+    /* fill */
+      .progress-fill1 {
+      background: #3498db;
+      height: 100%;
+      width: 50%;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      text-align: right;
+    }
+     .progress-fill2 {
+      background: #3498db;
+      height: 100%;
+      width: 30%;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      text-align: right;
+    }
+     .progress-fill3 {
+      background: #3498db;
+      height: 100%;
+      width: 70%;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      text-align: right;
+    }
+     .progress-fill4 {
+      background: #3498db;
+      height: 100%;
+      width: 86%;
+      border-radius: 20px;
+      transition: width 0.5s ease;
+      text-align: right;
+    }
+     .progress-text {
+      font-size: 13px;
+      font-weight: bold;
+      color: #333;
+    }
+    /* button styling */
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: #007BFF;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: background 0.3s;
+    }
+     .btn:hover {
+      background: #0056b3;
+    }
+      </style>
+
 
   <!-- css code -->
   <style>
@@ -158,5 +357,42 @@
     
 
   </style>
+
+  <!-- js code for tabs -->
+  <script>
+const tabButtons = document.querySelectorAll(".tab-btns button");
+const tabContents = document.querySelectorAll(".dashboard, .performance, .activities, .achievements");
+
+tabButtons.forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    // Stop default action (in case of <a href="#">)
+    e.preventDefault();
+
+    // Remove active class from all buttons
+    tabButtons.forEach(b => b.classList.remove("tab-btn-active"));
+    btn.classList.add("tab-btn-active");
+
+    // Hide all tab contents
+    tabContents.forEach(content => content.style.display = "none");
+
+    // Show the tab linked to this button
+    const tabId = btn.getAttribute("data-tab");
+    if (tabId) {
+      const tab = document.getElementById(tabId);
+      if (tab) {
+        tab.style.display = "block";
+      }
+    } else {
+      // Default to Courses dashboard if no data-tab
+      document.querySelector(".dashboard").style.display = "block";
+    }
+  });
+});
+
+// Show first tab by default
+document.querySelector(".dashboard").style.display = "block";
+</script>
+
+
 </body>
 </html>
